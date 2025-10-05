@@ -2,7 +2,7 @@
 
 ## Tool: **Godot**
 
-## Project: **Educational mini-game Or Simulation about the Environment. **
+## Project: Educational mini-game Or Simulation about the Environment
 
 ---
 
