@@ -20,14 +20,6 @@
           * I needed to drag and drop `icon.svg` onto the `Sprite2D` node or into the Texture field in the Inspector in order to print out the image. When I did that a little Godot robot head appear in the 2D view.
          
 <img width="1360" height="467" alt="image" src="https://github.com/user-attachments/assets/59b1a519-77de-41db-9cc7-62e7fe10ca6c" />
-
-**Recap**
-
-* Opened **Godot Web Editor**
-* Created a New Project
-* Switched to **2D mode**
-* Added a `Node2D` scene
-* Added a `Sprite2D` and gave it an image
   
 ---
 
