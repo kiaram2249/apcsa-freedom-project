@@ -20,7 +20,8 @@
           * I needed to drag and drop `icon.svg` onto the `Sprite2D` node or into the Texture field in the Inspector in order to print out the image. When I did that a little Godot robot head appear in the 2D view.
          
 <img width="1360" height="467" alt="image" src="https://github.com/user-attachments/assets/59b1a519-77de-41db-9cc7-62e7fe10ca6c" />
-  
+
+* For my next learning log I want to try making my imagines move by using the keybroad keys, and maybe adding more sprites as well. But for now my main prioritie is to download **Godot** onto my laptop so that I can use it into my **IDE**. That shall be my goal for tommorrow Freedom Project during class.
 ---
 
 <!-- 
