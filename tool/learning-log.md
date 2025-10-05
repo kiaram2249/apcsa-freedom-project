@@ -6,9 +6,18 @@
 
 ---
 
-### October/5/2025:
+#### October/5/2025:
+**Introduction to Godot**
 
-* 
+* I was trying to install **Gobot** onto my school chrome computer, but I was very confused in how to input it into my **IDE**. So, I search [Godot Web Editor](https://editor.godotengine.org/releases/latest/)
+
+* Installed Godot for the first time.
+
+Launched the Godot Editor and explored the interface.
+
+Created my first project (named: MyFirstGame).
+
+Added a new scene and experimented with some nodes like Node2D, Sprite2D
 
 ---
 
