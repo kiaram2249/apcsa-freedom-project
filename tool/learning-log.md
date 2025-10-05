@@ -17,6 +17,11 @@
         * I needed to go to **Scene panel** and click `Node2D`. Once I did that I needed to click **Add Child Node** and search `Sprite2D`.
       * The **sprite** would appear underneath my `Node2D`.
         * Since I now have my `Sprite2D`, I can finally add an image to the **sprite**.
+          * I needed to drag and drop `icon.svg` onto the Sprite2D node or into the Texture field in the Inspector in order to print out the image. When I did that a little Godot robot head appear in the 2D view.
+         
+<img width="1360" height="467" alt="image" src="https://github.com/user-attachments/assets/59b1a519-77de-41db-9cc7-62e7fe10ca6c" />
+
+* 
 
 
 ---
