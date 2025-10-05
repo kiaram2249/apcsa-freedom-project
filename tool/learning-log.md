@@ -9,15 +9,15 @@
 #### October/5/2025:
 **Introduction to Godot**
 
-* I was trying to install **Gobot** onto my school chrome computer, but I was very confused in how to input it into my **IDE**. So, I search [Godot Web Editor](https://editor.godotengine.org/releases/latest/)
+* I was trying to install **Gobot** onto my school chrome computer, but I was very confused in how to input it into my **IDE**. So, I search [Godot Web Editor](https://editor.godotengine.org/releases/latest/), in order to use **Godot**. By using this editor I was able to start my new project, however using this editor I wasn't really downloading or setting **Godot** on to my laptop. I'll try and do that tommorrow, cause I need a little help in setting it up.
+  
+* Anyways, I was able to use the editor and I created a file called **MyFirstProject**. Once I created my file from the wed editor, I decided to focus on learning how to function **2D models**.
+    * I went and learned how to make my first **Scene** and **Sprite**.
+      * How I created my **sprite**:
+        * I needed to go to **Scene panel** and click `Node2D`. Once I did that I needed to click **Add Child Node** and search `Sprite2D`.
+      * The **sprite** would appear underneath my `Node2D`.
+        * Since I now have my `Sprite2D`, I can finally add an image to the **sprite**.
 
-* Installed Godot for the first time.
-
-Launched the Godot Editor and explored the interface.
-
-Created my first project (named: MyFirstGame).
-
-Added a new scene and experimented with some nodes like Node2D, Sprite2D
 
 ---
 
