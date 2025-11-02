@@ -27,7 +27,7 @@
 #### November/2/2025:
 **Godot Web Editor Features**
 
-* Since I can't download **Godot** onto my school chrome, I am still using the [Godot Web Editor](https://editor.godotengine.org/releases/latest/). So, for today's learning log, I decided to learn how to upload an image from Google onto **Godot**. Then I learned how to add a **Sprite** in order to make that image move around when the user is using there mouse key or arrow key.
+* Since I can't download **Godot** onto my school chrome, I am still using the [Godot Web Editor](https://editor.godotengine.org/releases/latest/). So, for today's learning log, I decided to learn how to upload an image from Google onto **Godot**, and how to add a **Sprite** in order to make that image move around when the user is using there mouse key or arrow key.
 
 * I first began to create a **scene** and add a **sprite**
   * I needed to create a scene with a **Node2D**, this is a **root node**.
