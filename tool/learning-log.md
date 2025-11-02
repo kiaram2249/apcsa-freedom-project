@@ -24,6 +24,44 @@
 * For my next learning log I want to try making my imagines move by using the keybroad keys, and maybe adding more sprites as well. But for now my main prioritie is to download **Godot** onto my laptop so that I can use it into my **IDE**. That shall be my goal for tommorrow Freedom Project during class.
 ---
 
+November/2/2025
+**Godot Web Editor Features**
+
+* Since I can't download **Godot** onto my school chrome, I am still using the [Godot Web Editor](https://editor.godotengine.org/releases/latest/). So, for today's learning log, I decided to learn how to upload an image from Google onto **Godot**. Then I learned how to add a **Sprite** in order to make that image move around when the user is using there mouse key or arrow key.
+
+* I first began to create a **scene** and add a **sprite**
+  * I needed to create a scene with a **Node2D**, this is a **root node**.
+  * After that I began to add a **Sprite2D** node as a child of **Node2D** and I assigned my image to it by setting the **texture** property in the **inspector**.
+* Once I did that I than began to write the script for movement
+  * So, I needed to attach a script to the **Sprite2D** node.
+  * By using the script I was able to make a code that allows the user to move the image by using the arrow keys or the mouse. Once everything was done, I saved the scene and press the play button to test the scene. 
+
+**The code that allows the image to move around by using the arrow keys or mouse:**
+```JS
+extends Sprite2D
+
+var speed = 200
+
+func _process(delta):
+    if Input.is_action_pressed('ui_right'):
+        position.x += speed * delta
+    if Input.is_action_pressed('ui_left'):
+        position.x -= speed * delta
+    if Input.is_action_pressed('ui_down'):
+        position.y += speed * delta
+    if Input.is_action_pressed('ui_up'):
+        position.y -= speed * delta
+```
+
+**Takeaywas:**
+
+* I need to make sure that I assign the image to the **sprite**.
+* I need to write the movement code and attach it to the **Sprite2D** node.
+* To ensure the scence is saved and to play/test it by using the play button.
+* To use **print statements** because print statements are helpful when debugging and verifying the script.
+---
+
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
