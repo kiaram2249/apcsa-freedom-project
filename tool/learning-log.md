@@ -43,12 +43,12 @@ var speed = 200 // speed is set to 200 units per second
 func _process(delta): // _process is the funcation that is called every frame
     if Input.is_action_pressed('ui_right'): // moves to the right
         position.x += speed * delta // delta ensures frame rate-independent movement
-    if Input.is_action_pressed('ui_left'):
-        position.x -= speed * delta // decreasing the x-coordinate, making it move to the left
-    if Input.is_action_pressed('ui_down'): 
-        position.y += speed * delta // increasing the y-coordinate, making it move up
-    if Input.is_action_pressed('ui_up'):
-        position.y -= speed * delta // decreasing the y-coordinate, making it move down
+    if Input.is_action_pressed('ui_left'): // moves to the left
+        position.x -= speed * delta // decreasing the x-coordinate
+    if Input.is_action_pressed('ui_down'): // moves up
+        position.y += speed * delta // increasing the y-coordinate
+    if Input.is_action_pressed('ui_up'): // moves down
+        position.y -= speed * delta // decreasing the y-coordinate
 ```
 
 * This script moves the sprite in the 2D space based on user input, using the arrow keys to control the movement. Also, the speed of the movement is frame rate-independent, so the sprite moves consistently regardless of the system's performance.
