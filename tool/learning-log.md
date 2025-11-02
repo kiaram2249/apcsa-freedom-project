@@ -34,24 +34,27 @@
   * After that I began to add a **Sprite2D** node as a child of **Node2D** and I assigned my image to it by setting the **texture** property in the **inspector**.
     * Once I did that I than began to write the script for movement
       * So, I needed to attach a script to the **Sprite2D** node.
-      * By using the script I was able to make a code that allows the user to move the image by using the arrow keys or the mouse. Once everything was done, I saved the scene and press the play button to test the scene. 
+      * By using the script I was able to make a code that allows the user to move the image by using the arrow keys or the mouse. 
 
 **The code that allows the image to move around by using the arrow keys or mouse:**
 ```JS
 extends Sprite2D
 
-var speed = 200
+var speed = 200 // speed is set to 200 units per second
 
-func _process(delta):
-    if Input.is_action_pressed('ui_right'):
-        position.x += speed * delta
+func _process(delta): // _process is the funcation that is called every frame
+    if Input.is_action_pressed('ui_right'): // moves to the right
+        position.x += speed * delta // delta ensures frame rate-independent movement
     if Input.is_action_pressed('ui_left'):
-        position.x -= speed * delta
-    if Input.is_action_pressed('ui_down'):
-        position.y += speed * delta
+        position.x -= speed * delta // decreasing the x-coordinate, making it move to the left
+    if Input.is_action_pressed('ui_down'): 
+        position.y += speed * delta // increasing the y-coordinate, making it move up
     if Input.is_action_pressed('ui_up'):
-        position.y -= speed * delta
+        position.y -= speed * delta // decreasing the y-coordinate, making it move down
 ```
+
+* This script moves the sprite in the 2D space based on user input, using the arrow keys to control the movement. The speed of the movement is frame rate-independent, so the sprite moves consistently regardless of the system's performance.
+
 
 **Takeaywas:**
 
