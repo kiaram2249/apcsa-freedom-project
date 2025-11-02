@@ -24,7 +24,7 @@
 * For my next learning log I want to try making my imagines move by using the keybroad keys, and maybe adding more sprites as well. But for now my main prioritie is to download **Godot** onto my laptop so that I can use it into my **IDE**. That shall be my goal for tommorrow Freedom Project during class.
 ---
 
-November/2/2025
+#### November/2/2025:
 **Godot Web Editor Features**
 
 * Since I can't download **Godot** onto my school chrome, I am still using the [Godot Web Editor](https://editor.godotengine.org/releases/latest/). So, for today's learning log, I decided to learn how to upload an image from Google onto **Godot**. Then I learned how to add a **Sprite** in order to make that image move around when the user is using there mouse key or arrow key.
