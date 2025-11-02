@@ -29,7 +29,7 @@
 
 * Since I can't download **Godot** onto my school chrome, I am still using the [Godot Web Editor](https://editor.godotengine.org/releases/latest/). So, for today's learning log, I decided to learn how to upload an image from Google onto **Godot**, and how to add a **Sprite** in order to make that image move around when the user is using there mouse key or arrow key.
 
-* Creating a **scene** and add a **sprite:**
+* Creating a **scene** and adding a **sprite:**
   * I needed to create a scene with a **Node2D**, this is a **root node**. After that I began to add a **Sprite2D** node as a child of **Node2D** and I assigned my image to it by setting the **texture** property in the **inspector**.
 * Writing the **script** for movement:
     * So, I needed to attach a script to the **Sprite2D** node, and by using the script I was able to make a code that allows the user to move the image by using the arrow keys or the mouse. 
