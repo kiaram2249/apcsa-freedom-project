@@ -32,9 +32,9 @@
 * I first began to create a **scene** and add a **sprite**
   * I needed to create a scene with a **Node2D**, this is a **root node**.
   * After that I began to add a **Sprite2D** node as a child of **Node2D** and I assigned my image to it by setting the **texture** property in the **inspector**.
-* Once I did that I than began to write the script for movement
-  * So, I needed to attach a script to the **Sprite2D** node.
-  * By using the script I was able to make a code that allows the user to move the image by using the arrow keys or the mouse. Once everything was done, I saved the scene and press the play button to test the scene. 
+    * Once I did that I than began to write the script for movement
+      * So, I needed to attach a script to the **Sprite2D** node.
+      * By using the script I was able to make a code that allows the user to move the image by using the arrow keys or the mouse. Once everything was done, I saved the scene and press the play button to test the scene. 
 
 **The code that allows the image to move around by using the arrow keys or mouse:**
 ```JS
