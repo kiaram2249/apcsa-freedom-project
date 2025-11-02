@@ -51,7 +51,7 @@ func _process(delta): // _process is the funcation that is called every frame
         position.y -= speed * delta // decreasing the y-coordinate, making it move down
 ```
 
-* This script moves the sprite in the 2D space based on user input, using the arrow keys to control the movement. The speed of the movement is frame rate-independent, so the sprite moves consistently regardless of the system's performance.
+* This script moves the sprite in the 2D space based on user input, using the arrow keys to control the movement. Also, the speed of the movement is frame rate-independent, so the sprite moves consistently regardless of the system's performance.
 
 
 **Takeaywas:**
