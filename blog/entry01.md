@@ -3,7 +3,7 @@
 
 ### Content
 
-This year in **APCSA**, my partner and I will be making an **educational simulation** about the **environment** as our Freedom Project. We'll be using a tool called ``Godot``, which is a game engine that allows us to create interactive and engaging experiences. Unlike last year's projects, where many students made games or wedsites, this year my partner and I will be focusing on programming and simulation development. Our goal is to teach players about environmental awareness and how different actions can impact the planet. Both my partner and I will be learning how to use ``Godot`` features like **scenes**, **scripting**, and **animations** to bring our simulation to life and make it both fun and educational.
+This year in **APCSA**, my partner and I will be making an **educational simulation** about the **environment** as our Freedom Project. We'll be using a tool called ``Godot``, which is a game engine that allows us to create interactive and engaging experiences. Unlike last year's projects, where many students made games or websites, this year my partner and I will be focusing on programming and simulation development. Our goal is to teach players about environmental awareness and how different actions can impact the planet. Both my partner and I will be learning how to use ``Godot`` features like **scenes**, **scripting**, and **animations** to bring our simulation to life and make it both fun and educational.
 
 ### Godot 
 
