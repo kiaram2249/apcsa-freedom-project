@@ -65,16 +65,50 @@ func _process(delta): // _process is the funcation that is called every frame
 #### November/15/2025:
 **Platformer**
 
-* Since now that I got myself a school window laptop, I can now use **Godot** more properly. So, in this first part of [Godot 2D Platformer Tutorial](https://www.youtube.com/watch?v=S2NG6fobarM) I learned how to set up the foundation of a game by creating new projects, building a basic level layout, and designing a functional player character. I also learn how to import/add a **sprite**, setting up **collision shapes**, and organizing the player as its own **scene**. While watching this tutorial I as well learned how core movement code allows the character to walk, jump, and interact with the platform by using **Godot** physics system. However, by the end of this I was able to understand the essential concepts like **gravity**, detecting when the player is on the floor, and knowing how to use ``move_and_slide`` in order to create **smooth**.
+[Godot 2D Platformer Tutorial](https://www.youtube.com/watch?v=S2NG6fobarM) \
 
-**Setting Up the Main Scene:**
-* First thing that I needed to do was create a new project and set up the project folder.
-  * Once I did that I needed to create a **Node2D** root node for the level. I also needed to add a **TileMap** in order to build a simple ground or platform.
-  * Defining the **collision shapes** / **physics** for the platform is also important to do because it allows the player to land on the platform.
-  * 
+* To set up a basic platformer level, I begin by creating a **root node** such as a **Node2D** and adding a **TileMap** or static platform nodes to form the ground and platforms. Next, I made sure to define **collision shapes so that the player can interact with the environment properly. Then, I imported the player's artwork, adding a **Sprite** or **AnimatedSprite2D** and setting up the animation frames. Lastly, I attach a **CollisionShape2D** that fits the player's **sprite**, and **configure collision** layers and masks so the player ineracts with the fround as intended.
 
+  * **TileMap** is where you can actually paint tiles ``Building``
+  * **TileSet** is where you're editing tile properties ``Editing``
 
+* Once I set everything up, I begin to attach a **GDScript** to the player and defined the key variables including movement such as speed, jump force, and gravity.
+  * ``_physics_process(delta)`` function implement horizontal movement based on player input, apply gravity, and handle jumping when the player is on the floor.
 
+  * ``move_and_slide()`` or ``move_and_collide()`` moves the character and detects grounded status.
+* Once inputting those functions in the **script's** I needed to test the **scence** and tweak the movement values, the **collision shapes**, and the **sprite** alignment until everything feels smooth.
+
+```JS
+extends CharacterBody2D
+```
+* This tells Godot that the **script** is controlling a **CharacterBody2D**, which is a physics object designed.
+  * Moving a character
+  * Handling collisions
+  * Sliding on floors and slopes
+
+```JS
+@export var speed: float = 200.0
+@export var jump_force: float = -400.0
+@export var gravity: float = 1000.0
+```
+* These variables show up in the inspector and it tweaks the speed, the initial jump strength, and gravity.
+
+```JS
+var velocity: Vector2 = Vector2.ZERO
+```
+* ``velocity.x`` = left/right movement
+* ``velocity.y`` = up/down movement [gravity & jumping]
+
+```JS
+func _physics_process(delta: float) -> void:
+```
+* This function run every physics frame (60 times per second)
+
+```JS
+var direction := Input.get_axis("ui_left", "ui_right")
+velocity.x = direction * speed
+```
+* ``Input.get_axis(a, b)`` reuturns -1 when holding left, 1 when holding right, and 0 when not pressing anything
 ---
 <!-- 
 * Links you used today (websites, videos, etc)
