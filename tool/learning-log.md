@@ -116,18 +116,17 @@ func _physics_process(delta: float) -> void:
             $AnimatedSprite2D.play("run")
 ```
 
+**Takeaways:**
+* Based on the YouTube video a takeaway that I can take is that using **Godot** **node/scene** system enables you to separate the player logic, level geometry, and visual assets.
+* Another takeaway that I took from the video is that setting up **collisions** and ensuring the player properly interacts.
+* Even though I mentioned it earlier from the learning log, but when I was setting up the **TileSet** and **TileMap** I didn't knew the difference was until he explained it.
+  * **TileMap** is where you can actually paint tiles ``Building``
+  * **TileSet** is where you're editing tile properties ``Editing``
 * ``jump_force`` is negative so the player moves upwards.
 * ``Vector2.UP`` tells **Godot** the up direction for the character.
 * ``velocity.x`` = left/right movement
 * ``velocity.y`` = up/down movement [gravity & jumping]
 * ``Input.get_axis(a, b)`` reuturns -1 when holding left, 1 when holding right, and 0 when not pressing anything.
-
-```JS
-@export var speed: float = 200.0
-@export var jump_force: float = -400.0
-@export var gravity: float = 1000.0
-```
-* These variables show up in the inspector and it tweaks the speed, the initial jump strength, and gravity.
 
 ```JS
 if not is_on_floor():
@@ -137,13 +136,6 @@ else:
         velocity.y = 0
 ```
 * If the player is not on the floor/platform then the gravity will pull them down. However, if the player is on the floor/platform then this code will reset downward velocity and prevent the floor from bouncing or sliding.
-
-**Takeaways:**
-* Based on the YouTube video a takeaway that I can take is that using **Godot** **node/scene** system enables you to separate the player logic, level geometry, and visual assets.
-* Another takeaway that I took from the video is that setting up **collisions** and ensuring the player properly interacts.
-* Even though I mentioned it earlier from the learning log, but when I was setting up the **TileSet** and **TileMap** I didn't knew the difference was until he explained it.
-  * **TileMap** is where you can actually paint tiles ``Building``
-  * **TileSet** is where you're editing tile properties ``Editing``
 ---
 
 
