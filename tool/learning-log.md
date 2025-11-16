@@ -67,7 +67,7 @@ func _process(delta): // _process is the funcation that is called every frame
 
 **Sources:** [Godot 2D Platformer Tutorial](https://www.youtube.com/watch?v=S2NG6fobarM)
 
-* To set up a basic platformer level, I begin by creating a **root node** such as a **Node2D** and adding a **TileMap** or static platform nodes to form the ground and platforms. Next, I made sure to define **collision shapes so that the player can interact with the environment properly. Then, I imported the player's artwork, adding a **Sprite** or **AnimatedSprite2D** and setting up the animation frames. Lastly, I attach a **CollisionShape2D** that fits the player's **sprite**, and **configure collision** layers and masks so the player ineracts with the fround as intended.
+* To set up a basic platformer level, I begin by creating a **root node** such as a **Node2D** and adding a **TileMap** or static platform nodes to form the ground and platforms. Next, I made sure to define **collision shapes** so that the player can interact with the environment properly. Then, I imported the player's artwork, adding a **Sprite** or **AnimatedSprite2D** and setting up the animation frames. Lastly, I attach a **CollisionShape2D** that fits the player's **sprite**, and **configure collision** layers and masks so the player ineracts with the fround as intended.
 
   * **TileMap** is where you can actually paint tiles ``Building``
   * **TileSet** is where you're editing tile properties ``Editing``
