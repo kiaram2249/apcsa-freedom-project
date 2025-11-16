@@ -65,8 +65,12 @@ func _process(delta): // _process is the funcation that is called every frame
 #### November/15/2025:
 **Platformer**
 
-* Since now that I got myself a school window laptop, I can now use **Godot** more properly. So, in this first part of [Godot 2D Platformer Tutorial](https://www.youtube.com/watch?v=S2NG6fobarM) I learned how to set up the foundation of a game by creating new projects, building a basic level layout, and designing a functional player character. I also learn how to import/add a sprite, setting up collision shapes, and organizing the player as its own scene. While watching this tutorial I as well learned how ro core movement code that allows the character to walk, jump, and interact with the platform by using **Godot** physics system. However, by the end of this I was able to understand the essential concepts like gravity, detecting when the player is on the floor, and knowing how to use ``move_and_slide`` in order to create smooth.
-  
+* Since now that I got myself a school window laptop, I can now use **Godot** more properly. So, in this first part of [Godot 2D Platformer Tutorial](https://www.youtube.com/watch?v=S2NG6fobarM) I learned how to set up the foundation of a game by creating new projects, building a basic level layout, and designing a functional player character. I also learn how to import/add a **sprite**, setting up **collision shapes**, and organizing the player as its own **scene**. While watching this tutorial I as well learned how core movement code allows the character to walk, jump, and interact with the platform by using **Godot** physics system. However, by the end of this I was able to understand the essential concepts like **gravity**, detecting when the player is on the floor, and knowing how to use ``move_and_slide`` in order to create **smooth**.
+
+**Setting Up the Main Scene:**
+* First thing that I needed to do was create a new project and set up the project folder.
+  * Once I did that I needed to create a **Node2D** root node for the level. I also needed to add a **TileMap** in order to build a simple ground or platform.
+  * Defining the **collision shapes** / **physics** for the platform is also important to do because it allows the player to land on the platform.
   * 
 
 
