@@ -136,7 +136,7 @@ else:
     if velocity.y > 0:
         velocity.y = 0
 ```
-* If the player is not on the floor/platform then the gravity will pull them down. Hoever, if the player is on the floor/platform then this code will reset downward velocity and prevent the floor from bouncing or sliding.
+* If the player is not on the floor/platform then the gravity will pull them down. However, if the player is on the floor/platform then this code will reset downward velocity and prevent the floor from bouncing or sliding.
 
 **Takeaways:**
 * Based on the YouTube video a takeaway that I can take is that using **Godot** **node/scene** system enables you to separate the player logic, level geometry, and visual assets.
