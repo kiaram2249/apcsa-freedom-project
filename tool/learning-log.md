@@ -138,6 +138,12 @@ else:
 ```
 * If the player is not on the floor/platform then the gravity will pull them down. Hoever, if the player is on the floor/platform then this code will reset downward velocity and prevent the floor from bouncing or sliding.
 
+**Takeaways:**
+* Based on the YouTube video a takeaway that I can take is that using **Godot** **node/scene** system enables you to separate the player logic, level geometry, and visual assets.
+* Another takeaway that I took from the video is that setting up **collisions** and ensuring the player properly interacts.
+* Even though I mentioned it earlier from the learning log, but when I was setting up the **TileSet** and **TileMap** I didn't knew the difference was until he explained it.
+  * **TileMap** is where you can actually paint tiles ``Building``
+  * **TileSet** is where you're editing tile properties ``Editing``
 ---
 
 
