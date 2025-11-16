@@ -88,7 +88,7 @@ extends CharacterBody2D
 @export var jump = -400
 @export var gravity = 1000
 
-var vel = Vector2() # my velocity
+var vel = Vector2() 
 
 func _physics_process(delta):
 	var move = Input.get_axis("ui_left","ui_right")
