@@ -80,40 +80,44 @@ func _process(delta): // _process is the funcation that is called every frame
 * Once inputting those functions in the **script's** I needed to test the **scence** and tweak the movement values, the **collision shapes**, and the **sprite** alignment until everything feels smooth.
 
 **MY CODE:**
+
 ```JS
 extends CharacterBody2D
 
-@export var speed: float = 200.0
-@export var jump_force: float = -400.0
-@export var gravity: float = 1000.0
+@export var spd = 200
+@export var jmp = -400
+@export var grav = 1000
 
-var velocity: Vector2 = Vector2.ZERO
+var vel = Vector2() # my velocity
 
-func _physics_process(delta: float) -> void:
-    var direction := Input.get_axis("ui_left", "ui_right")
-    velocity.x = direction * speed
-
-    if not is_on_floor():
-        velocity.y += gravity * delta
-    else:
-        if velocity.y > 0:
-            velocity.y = 0
-
-    if Input.is_action_just_pressed("ui_jump") and is_on_floor():
-        velocity.y = jump_force
-
-    velocity = move_and_slide(velocity, Vector2.UP)
-
-    if direction != 0:
-        $AnimatedSprite2D.flip_h = direction < 0
-
-    if $AnimatedSprite2D:
-        if not is_on_floor():
-            $AnimatedSprite2D.play("jump")
-        elif direction == 0:
-            $AnimatedSprite2D.play("idle")
-        else:
-            $AnimatedSprite2D.play("run")
+func _physics_process(delta):
+	var move = Input.get_axis("ui_left","ui_right")
+	vel.x = move * spd
+	
+	if !is_on_floor():
+		vel.y = vel.y + grav * delta
+	else:
+		# idk why but fixing falling
+		if vel.y > 0:
+			vel.y = 0
+	
+	if Input.is_action_just_pressed("ui_jump"):
+		if is_on_floor():
+			vel.y = jmp
+	
+	vel = move_and_slide(vel, Vector2.UP)
+	
+	if move != 0:
+		$AnimatedSprite2D.flip_h = move < 0
+	
+	if $AnimatedSprite2D:
+		if !is_on_floor():
+			$AnimatedSprite2D.play("jump")
+		else:
+			if move == 0:
+				$AnimatedSprite2D.play("idle")
+			else:
+				$AnimatedSprite2D.play("run")
 ```
 ---
 
