@@ -62,7 +62,16 @@ func _process(delta): // _process is the funcation that is called every frame
 * To use **print statements** because print statements are helpful when debugging and verifying the script.
 ---
 
+#### November/15/2025:
+**Platformer**
 
+* Since now that I got myself a school window laptop, I can now use **Godot** more properly. So, in this first part of [Godot 2D Platformer Tutorial](https://www.youtube.com/watch?v=S2NG6fobarM) I learned how to set up the foundation of a game by creating new projects, building a basic level layout, and designing a functional player character. I also learn how to import/add a sprite, setting up collision shapes, and organizing the player as its own scene. While watching this tutorial I as well learned how ro core movement code that allows the character to walk, jump, and interact with the platform by using **Godot** physics system. However, by the end of this I was able to understand the essential concepts like gravity, detecting when the player is on the floor, and knowing how to use ``move_and_slide`` in order to create smooth.
+  
+  * 
+
+
+
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
