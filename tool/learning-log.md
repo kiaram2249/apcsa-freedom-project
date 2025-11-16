@@ -84,26 +84,25 @@ func _process(delta): // _process is the funcation that is called every frame
 ```JS
 extends CharacterBody2D
 
-@export var spd = 200
-@export var jmp = -400
-@export var grav = 1000
+@export var speed = 200
+@export var jump = -400
+@export var gravity = 1000
 
 var vel = Vector2() # my velocity
 
 func _physics_process(delta):
 	var move = Input.get_axis("ui_left","ui_right")
-	vel.x = move * spd
+	vel.x = move * speed
 	
 	if !is_on_floor():
-		vel.y = vel.y + grav * delta
+		vel.y = vel.y + gravity * delta
 	else:
-		# idk why but fixing falling
 		if vel.y > 0:
 			vel.y = 0
 	
 	if Input.is_action_just_pressed("ui_jump"):
 		if is_on_floor():
-			vel.y = jmp
+			vel.y = jump
 	
 	vel = move_and_slide(vel, Vector2.UP)
 	
