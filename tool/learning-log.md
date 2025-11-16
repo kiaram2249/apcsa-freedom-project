@@ -78,6 +78,7 @@ func _process(delta): // _process is the funcation that is called every frame
   * ``move_and_slide()`` or ``move_and_collide()`` moves the character and detects grounded status.
 * Once inputting those functions in the **script's** I needed to test the **scence** and tweak the movement values, the **collision shapes**, and the **sprite** alignment until everything feels smooth.
 
+* Here is show code snippets from my code that I did onto **Godot**. For each code snippet I will example what it does and what function is used for as well.
 ```JS
 extends CharacterBody2D
 ```
@@ -102,14 +103,39 @@ var velocity: Vector2 = Vector2.ZERO
 ```JS
 func _physics_process(delta: float) -> void:
 ```
-* This function run every physics frame (60 times per second)
+* This function run every physics frame (60 times per second).
 
 ```JS
 var direction := Input.get_axis("ui_left", "ui_right")
 velocity.x = direction * speed
 ```
-* ``Input.get_axis(a, b)`` reuturns -1 when holding left, 1 when holding right, and 0 when not pressing anything
+* ``Input.get_axis(a, b)`` reuturns -1 when holding left, 1 when holding right, and 0 when not pressing anything.
+
+```JS
+if not is_on_floor():
+    velocity.y += gravity * delta
+else:
+    if velocity.y > 0:
+        velocity.y = 0
+```
+* If the player is not on the floor/platform then the gravity will pull them down. Hoever, if the player is on the floor/platform then this code will reset downward velocity and prevent the floor from bouncing or sliding.
+
+```JS
+if Input.is_action_just_pressed("ui_jump") and is_on_floor():
+    velocity.y = jump_force
+```
+* ``jump_force`` is negative so the player moves upwards.
+
+```JS
+velocity = move_and_slide(velocity, Vector2.UP)
+```
+* This moves the player based on **velocity** and automatically handles.
+* ``Vector2.UP`` tells **Godot** the up direction for the character.
+
+
 ---
+
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
