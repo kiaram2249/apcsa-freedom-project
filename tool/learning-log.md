@@ -151,7 +151,7 @@ func _process(delta):
         sprite.flip_h = true   # Flips the sprite horizontally so it faces left
 
     else:
-        sprite.play("idle")
+        sprite.play("idle")    # Idle animation when not walking
 ```
 ---
 <!-- 
