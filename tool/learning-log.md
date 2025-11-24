@@ -133,7 +133,7 @@ func _physics_process(delta):
    * ``AnimatedSprite2D.play("animation_name")`` switches between animations.
    * ``stop()`` can be used to stop an animation.
    * ``flip_h`` is useful to flip the sprite horizontally, so when the player changes directions, the animation plays correctly facing left or right.
- 
+
 ---
 <!-- 
 * Links you used today (websites, videos, etc)
