@@ -134,6 +134,25 @@ func _physics_process(delta):
    * ``stop()`` can be used to stop an animation.
    * ``flip_h`` is useful to flip the sprite horizontally, so when the player changes directions, the animation plays correctly facing left or right.
 
+**MY CODE: (Switches animation and flips the sprites)**
+
+```JS
+extends Node2D
+
+@onready var sprite = $AnimatedSprite2D
+
+func _process(delta):
+    if Input.is_action_pressed("ui_right"):
+        sprite.play("run")
+        sprite.flip_h = false  # The sprite faces right (not flipped)
+
+    elif Input.is_action_pressed("ui_left"):
+        sprite.play("run")
+        sprite.flip_h = true   # Flips the sprite horizontally so it faces left
+
+    else:
+        sprite.play("idle")
+```
 ---
 <!-- 
 * Links you used today (websites, videos, etc)
