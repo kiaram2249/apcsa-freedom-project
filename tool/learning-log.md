@@ -120,7 +120,61 @@ func _physics_process(delta):
 ```
 ---
 
+#### November/23/2025:
+**Animations**
 
+**Sources:** [How To Make 2D Player Animations In Godot](https://www.youtube.com/watch?v=H_3HEzOqso0) : [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+
+* In this video, I learned how to set up a **2D animation** in Godot using ``AnimatedSprite2D``. First, I created a **SpriteFrames** resource and imported multipe frames to build different animation states. Then, I assigned that **SptiteFrames** to the ``AnimatedSprite2D`` node so it can play the animations.
+   * ``AnimatedSprite2D`` uses **SpriteFrames** resource to define its animations.
+   * In the SpriteFrames editor, I can set the **FPS** for each animation, and give animations names like **run**, **ide**, and **jump** for instance.
+   * Using **loops** is optional when it comes into making an animation, but it just depends on what is needed.
+* After creating the animations, the video showed how to control the animation from code.
+   * ``AnimatedSprite2D.play("animation_name")`` switches between animations.
+   * ``stop()`` can be used to stop an animation.
+   * ``flip_h`` is useful to flip the sprite horizontally, so when the player changes directions, the animation plays correctly facing left or right.
+ 
+**MY CODE:**
+
+```JS
+extends CharacterBody2D
+
+@export var speed = 200
+@export var jump_force = -400
+@export var gravity = 1000
+
+var vel = Vector2()
+
+func _physics_process(delta):
+    var move = Input.get_axis("ui_left", "ui_right")
+    vel.x = move * speed
+
+    if not is_on_floor():
+        vel.y += gravity * delta
+    else:
+        if vel.y > 0:
+            vel.y = 0
+
+    if Input.is_action_just_pressed("ui_jump") and is_on_floor():
+        vel.y = jump_force
+
+    vel = move_and_slide(vel, Vector2.UP)
+
+    # Animate
+    var anim = $AnimatedSprite2D
+    if move != 0:
+        anim.flip_h = move < 0
+
+    if not is_on_floor():
+        anim.play("jump")
+    else:
+        if move == 0:
+            anim.play("idle")
+        else:
+            anim.play("run")
+
+```
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
