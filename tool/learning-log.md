@@ -123,7 +123,7 @@ func _physics_process(delta):
 #### November/23/2025:
 **Animations**
 
-**Sources:** [How To Make 2D Player Animations In Godot](https://www.youtube.com/watch?v=H_3HEzOqso0) : [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+**Sources:** [How To Make 2D Player Animations In Godot](https://www.youtube.com/watch?v=H_3HEzOqso0) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
 
 * In this video, I learned how to set up a **2D animation** in Godot using ``AnimatedSprite2D``. First, I created a **SpriteFrames** resource and imported multipe frames to build different animation states. Then, I assigned that **SptiteFrames** to the ``AnimatedSprite2D`` node so it can play the animations.
    * ``AnimatedSprite2D`` uses **SpriteFrames** resource to define its animations.
