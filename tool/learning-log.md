@@ -134,46 +134,6 @@ func _physics_process(delta):
    * ``stop()`` can be used to stop an animation.
    * ``flip_h`` is useful to flip the sprite horizontally, so when the player changes directions, the animation plays correctly facing left or right.
  
-**MY CODE:**
-
-```JS
-extends CharacterBody2D
-
-@export var speed = 200
-@export var jump_force = -400
-@export var gravity = 1000
-
-var vel = Vector2()
-
-func _physics_process(delta):
-    var move = Input.get_axis("ui_left", "ui_right")
-    vel.x = move * speed
-
-    if not is_on_floor():
-        vel.y += gravity * delta
-    else:
-        if vel.y > 0:
-            vel.y = 0
-
-    if Input.is_action_just_pressed("ui_jump") and is_on_floor():
-        vel.y = jump_force
-
-    vel = move_and_slide(vel, Vector2.UP)
-
-    # Animate
-    var anim = $AnimatedSprite2D
-    if move != 0:
-        anim.flip_h = move < 0
-
-    if not is_on_floor():
-        anim.play("jump")
-    else:
-        if move == 0:
-            anim.play("idle")
-        else:
-            anim.play("run")
-
-```
 ---
 <!-- 
 * Links you used today (websites, videos, etc)
