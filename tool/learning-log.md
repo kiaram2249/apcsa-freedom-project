@@ -155,7 +155,7 @@ func _process(delta):
 ```
 ---
 
-#### December/7/2025
+#### December/7/2025:
 **Moving Platforms & Jump Downs**
 
 **Sources:** [Jumping Down From Platforms & Moving Platforms In Godot 4](https://www.youtube.com/watch?v=tpsk5tmmLLE) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
