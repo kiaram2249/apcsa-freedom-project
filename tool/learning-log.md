@@ -158,6 +158,8 @@ func _process(delta):
 #### December/7/2025
 **Moving Platforms & Jump Downs**
 
+**Sources:** [Jumping Down From Platforms & Moving Platforms In Godot 4](https://www.youtube.com/watch?v=tpsk5tmmLLE) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+
 * In this video, I learned how to create **jump-down**/**drop-through** platforms and how to handle **moving platforms** in Godot. The tutorial explained how to let the player fall through a **one-way platform** by temporarily disabling collision, and how to make the player properly ride along with a **moving platform**.
    * One-way platforms use normal collision, but you can **disable the collision mask** for a moment so the player falls through.
    * The drop-down action is usually triggered by pressing ``down + jump`` at the same time.
