@@ -154,6 +154,44 @@ func _process(delta):
         sprite.play("idle")    # Idle animation when not walking
 ```
 ---
+
+#### December/7/2025
+**Moving Platforms & Jump Downs**
+
+* In this video, I learned how to create **jump-down**/**drop-through** platforms and how to handle **moving platforms** in Godot. The tutorial explained how to let the player fall through a **one-way platform** by temporarily disabling collision, and how to make the player properly ride along with a **moving platform**.
+   * One-way platforms use normal collision, but you can **disable the collision mask** for a moment so the player falls through.
+   * The drop-down action is usually triggered by pressing ``down + jump`` at the same time.
+   * A short **timer** is used so the collision re-enables after the player has passed through the platform.
+    
+* The video also showed how to handle **moving platforms** so the player doesn’t slide or get left behind.
+   * The platform stores its **current velocity** every frame.
+   * When the player is standing on the platform, that velocity is added to the player’s movement so they stay in sync. This keeps the player “stuck” to the platform, even when it moves quickly or changes direction.
+
+**MY CODE: Moving Platform**
+
+```JS
+extends Node2D
+
+@export var speed = 100.0
+@export var point_a: Vector2
+@export var point_b: Vector2
+
+var direction = 1
+var velocity: Vector2
+
+func _physics_process(delta: float) -> void:
+    var target = point_b if direction == 1 else point_a
+    var move_step = (target - position).normalized() * speed * delta
+
+    # Store velocity so the player can use it
+    velocity = move_step / delta
+
+    position += move_step
+
+    if position.distance_to(target) < 4:
+        direction *= -1
+```
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
