@@ -194,6 +194,51 @@ func _physics_process(delta: float) -> void:
         direction *= -1
 ```
 ---
+
+#### December/14/2025:
+**Scene Changing**
+
+**Sources:** [Scene Changing In Godot 4.2](https://www.youtube.com/watch?v=bv7EpR8gbF0) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+
+* In this video, I learned how to change scenes in **Godot** and how scene management works inside a project. The tutorial explained how scenes are structured and how to switch between them using code, which is useful for menus, levels, and transitions in a game.
+	* **Scene changes** are usually handled by the ``SceneTree`` using built-in functions.
+	* The main method used to switch scenes is ``get_tree().change_scene_to_file()``. This allows the game to load a new scene by providing the file path to the scene.
+* The tutorial also explained when and where to trigger a scene change.
+Scene changes can be activated by player **input**, **buttons**, or **collision events**.
+	* Helps keep the game organized and makes it easier to manage multiple levels or screens.
+
+**MY CODE: Scene Change with Keyboard Input**
+
+```JS
+extends Node
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		get_tree().change_scene_to_file("res://scenes/Menu.tscn")
+```
+
+**MY CODE: Scene Change Using a Button**
+
+```JS
+extends Button
+
+func _ready():
+	pressed.connect(_on_button_pressed)
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/Level1.tscn")
+```
+
+**MY CODE: Scene Change Using Player Collision (Door / Exit)**
+
+```JS
+extends Area2D
+
+func _on_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene_to_file("res://scenes/NextLevel.tscn")
+```
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
