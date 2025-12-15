@@ -200,7 +200,7 @@ func _physics_process(delta: float) -> void:
 
 **Sources:** [Scene Changing In Godot 4.2](https://www.youtube.com/watch?v=bv7EpR8gbF0) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
 
-* In this video, I learned how to change scenes in **Godot** and how scene management works inside a project. The tutorial explained how scenes are structured and how to switch between them using code, which is useful for menus, levels, and transitions in a game.
+* In this video, I learned how to change scenes in **Godot** and how scene management works inside a project. The tutorial explained how scenes are structured and how to switch between them using code, which is useful for **menus**, **levels**, and **transitions** in a game.
 	* **Scene changes** are usually handled by the ``SceneTree`` using built-in functions.
 	* The main method used to switch scenes is ``get_tree().change_scene_to_file()``. This allows the game to load a new scene by providing the file path to the scene.
 	* ``get_tree().paused`` or fade effects for smooth transitions.
