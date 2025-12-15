@@ -204,7 +204,7 @@ func _physics_process(delta: float) -> void:
 	* **Scene changes** are usually handled by the ``SceneTree`` using built-in functions.
 	* The main method used to switch scenes is ``get_tree().change_scene_to_file()``. This allows the game to load a new scene by providing the file path to the scene.
 	* ``get_tree().paused`` or fade effects for smooth transitions.
- 	* ``body_entered``
+ 	* ``body_entered`` checks if the body that entered is the player.
 * The tutorial also explained when and where to trigger a scene change.
 Scene changes can be activated by player **input**, **buttons**, or **collision events**.
 	* Helps keep the game organized and makes it easier to manage multiple levels or screens.
