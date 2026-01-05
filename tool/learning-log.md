@@ -242,7 +242,7 @@ func _on_body_entered(body):
 ```
 ---
 
-#### December/30/2025:
+#### January/4/2026:
 **Player Picking**
 
 **Sources:** [Player Pickups in Godot 4.2](https://www.youtube.com/watch?v=8rod3hFQBJQ) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com) 
