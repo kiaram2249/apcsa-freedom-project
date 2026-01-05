@@ -241,6 +241,29 @@ func _on_body_entered(body):
 		get_tree().change_scene_to_file("res://scenes/NextLevel.tscn")
 ```
 ---
+
+#### December/30/2025:
+**Player Picking**
+
+**Sources:** [Player Pickups in Godot 4.2](https://www.youtube.com/watch?v=8rod3hFQBJQ) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com) 
+
+* In this video, I learned how to create player pickups in **Godot** and how they work using **collision detection**. The tutorial showed how pickups like coins or items can be collected when the player touches them.
+	* Pickups are usually made using an ``Area2D`` node with a ``CollisionShape2D`` so the game can detect when the player enters the area.
+	* ``body_entered`` signal is used to check if the object that touched the pickup is the player.
+* When the player collides with the pickup, the script can run code to give the player a reward, such as increasing a score or adding an item to an inventory.
+	* ``queue_free()`` is used to remove it from the scene.
+* Pickups are important in games because they reward the player and make gameplay more interactive.
+
+**MY CODE: Picking up**
+
+```JS
+extends Area2D
+func _on_body_entered(body):
+	if body.name == "Player":
+		print("Pickup collected!")
+		queue_free()
+```
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
