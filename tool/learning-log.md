@@ -270,6 +270,39 @@ func _on_body_entered(body):
 
 **Sources:**
 
+* In this video, I learned how to create a **HUD** (``Heads-Up Display``) in **Godot** to show information to the player during gameplay.
+	* A HUD is usually created using a **CanvasLayer** so it stays fixed on the screen and does not move with the camera.
+	* UI nodes like **Label**, **TextureRect**, and **ProgressBar** are used to display things such as score, health, or time.
+* The HUD can be updated through scripts by changing text or values when events happen in the game.
+	* **Signals** are used to communicate between the player and the HUD so the displayed information updates correctly.
+* HUDs are important because they give players clear feedback and help them understand what is happening while playing the game.
+
+
+**MY CODE: HUD**
+
+* A **HUD** in order to update the score: 
+```JS
+extends CanvasLayer
+
+@onready var score_label = $ScoreLabel
+var score := 0
+
+func add_score(amount: int):
+	score += amount
+	score_label.text = "Score: " + str(score)
+```
+
+```JS
+extends Area2D
+
+@export var score_value := 1
+
+func _on_body_entered(body):
+	if body.name == "Player":
+		var hud = get_node("/root/Level/HUD")
+		hud.add_score(score_value)
+		queue_free()
+```
 ---
 <!-- 
 * Links you used today (websites, videos, etc)
