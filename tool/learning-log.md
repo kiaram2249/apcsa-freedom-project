@@ -280,14 +280,16 @@ func _on_body_entered(body):
 
 **MY CODE: HUD**
 
-* A **HUD** in order to update the score: 
+* This updates the score on the HUD every time the player collects something.
+	*  ``add_score()`` is a function defined in the HUD script
+	*  ``score_value`` is the number being sent to that function
 ```JS
 extends CanvasLayer
 
-@onready var score_label = $ScoreLabel
+@onready var score_label = get_node("ScoreLabel")
 var score := 0
 
-func add_score(amount: int):
+func update_score(amount: int):
 	score += amount
 	score_label.text = "Score: " + str(score)
 ```
