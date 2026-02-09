@@ -268,7 +268,7 @@ func _on_body_entered(body):
 #### February/8/2026:
 **HUD**
 
-**Sources:**
+**Sources:** [Adding a HUD in Godot 4.2](https://www.youtube.com/watch?v=k8zUXqoNcbA&t=5s) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
 
 * In this video, I learned how to create a **HUD** (``Heads-Up Display``) in **Godot** to show information to the player during gameplay.
 	* A HUD is usually created using a **CanvasLayer** so it stays fixed on the screen and does not move with the camera.
