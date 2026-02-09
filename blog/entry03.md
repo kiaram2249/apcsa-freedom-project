@@ -3,7 +3,7 @@
 
 ### Content
 
-Over the past few months, I have been learning **Godot** by experimenting with its tool and features using the **Godot Web Editor** 
+Over the past few months, I have been learning **Godot** by experimenting with its tool and features using the **Godot Web Editor** and now **Godot Engine**. I started with the basics, such as creating scenes, adding sprites, and moving them with keyboard input using GDScript. As I progressed, I learned more advanced mechanics like platformer movement, gravity, collisions, animations, moving platforms, scene transitions, player pickups, and etc. Through this tinkering process, I’ve gained a better understanding of how different systems in Godot work together and feel more prepared to begin building our game, moving to our next step within our plan.
 
 ### Engineering Design Process
 
