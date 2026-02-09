@@ -29,7 +29,7 @@ I am currently still on steps 3 and 4, which focus on **brainstorming** and **pl
 
 ### Goal
 
-I want my partner and I to start creating our game and bring it to life. Maybe we can make a mini verson of our main game to see what we can improve on and what adjustments we need to make as well. Also, I want to be able to start tinkering together with my partner. 
+I want my partner and I to start creating our game and bring it to life. I want to start building our game, making a mini verson of it so that we can see what we can improve on and what adjustments we need to make as well. Also, I want to be able to start tinkering together with my partner during class or when we're on breaks. 
 
 ### Professionalism
 
