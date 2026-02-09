@@ -264,6 +264,13 @@ func _on_body_entered(body):
 		queue_free()
 ```
 ---
+
+#### February/8/2026:
+**HUD**
+
+**Sources:**
+
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
