@@ -3,7 +3,7 @@
 
 ### Content
 
-
+Over the past few months, I have been learning **Godot** by experimenting with its tool and features using the **Godot Web Editor** 
 
 ### Engineering Design Process
 
