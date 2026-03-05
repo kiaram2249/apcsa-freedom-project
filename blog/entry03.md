@@ -5,6 +5,30 @@
 
 Over the past few months, I have been learning **Godot** by experimenting with its tool and features using the **Godot Web Editor** and now **Godot Engine**. I started with the basics, such as creating scenes, adding sprites, and moving them with keyboard input using GDScript. As I progressed, I learned more advanced mechanics like platformer movement, gravity, collisions, animations, moving platforms, scene transitions, player pickups, and etc. Through this tinkering process, I’ve gained a better understanding of how different systems in Godot work together and feel more prepared to begin building our game, moving to our next step within our plan.
 
+**Example: Code Moving Platform**
+```JS
+extends Node2D
+
+@export var speed = 100.0
+@export var point_a: Vector2
+@export var point_b: Vector2
+
+var direction = 1
+var velocity: Vector2
+
+func _physics_process(delta: float) -> void:
+    var target = point_b if direction == 1 else point_a
+    var move_step = (target - position).normalized() * speed * delta
+
+    # Store velocity so the player can use it
+    velocity = move_step / delta
+
+    position += move_step
+
+    if position.distance_to(target) < 4:
+        direction *= -1
+```
+
 ### Engineering Design Process
 
 I am currently still on steps 3 and 4, which focus on **brainstorming** and **planning**. At this stage, I am continuing to learn the basics of **Godot** by practicing and experimenting with its features. Now, it is time for my partner and me to think more deeply about the direction of our game. We need to start brainstorming for real this time, because we need to consider all the key elements. We need to consider the art style, player mechanics, how the user will interact with the game. For instance, I need to think about what type of character the player will control, how the game will look visually, how I can implement the movement and animations I have learned in **Godot**, and what environmental information that we want to put onto our game. Planning is also important because it will help my partner and I create a clear roadmap for the project. We can plan out which role we can do. For example, I can focus on defining the game's structure, while my partner can work on the level design, and the information that we'll put. These steps are important because it will allow us to combine everything we have learned about **Godot** into a cohesive and organized game plan. However, next we will slowly begin step 5, which is **creating** our game. This step will alow us to test our ideas in a playable form and apply what we have learned in **Godot**. Also, this can help us see what areas we need to improve on or adjustments that we need to make. 
