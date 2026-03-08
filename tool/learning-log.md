@@ -308,15 +308,37 @@ func _on_body_entered(body):
 ---
 
 #### March/8/2026:
-**HUD**
+**Time**
 
-**Sources:** [Adding a HUD in Godot 4.2](https://www.youtube.com/watch?v=k8zUXqoNcbA&t=5s) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)#### February/8/2026:
-**HUD**
+**Sources:** [Adding a Timer in Godot 4.2](https://www.youtube.com/watch?v=HrBjzSqEpwE) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
 
-**Sources:** [Adding a HUD in Godot 4.2](https://www.youtube.com/watch?v=k8zUXqoNcbA&t=5s) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+* In this video, I learned how to add and use a **Timer** in **Godot** to control time-based events in a game.
+  * A **Timer** node counts down from a set amount of time and runs code when the time finishes. When the timer reaches zero, it sends a timeout signal that can trigger a function in the script.
+  * The timer can be added as a node in the scene and configured in the Inspector by setting properties like **wait time**, **autostart**, and **one shot**.
+    * **Wait time** determines how long the timer runs;
+    * **Autostart** allows the timer to begin automatically when the scene starts;
+* The timeout signal can be connected to a script so that a specific function runs when the timer ends. This can be used for things like spawning enemies, triggering events, or repeating actions during gameplay.
+* Timers are useful in games because they help **control delays** and **repeated actions** without needing complicated code. Overall, the video showed how timers help manage time-based mechanics and make gameplay events happen at the right moment.
 
+**MY CODE: TIMER**
 
+```JS
+extends Node
+
+func _ready():
+    var timer = Timer.new()     
+    timer.wait_time = 3.0        // Set the timer to 3 seconds
+    timer.one_shot = false       // Repeat the timer
+    timer.autostart = true       // Start automatically
+    add_child(timer)            
+    
+    timer.timeout.connect(_on_timer_timeout)
+
+func _on_timer_timeout():
+    print("3 seconds passed!")
+```
 ---
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
