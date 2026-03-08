@@ -306,6 +306,17 @@ func _on_body_entered(body):
 		queue_free()
 ```
 ---
+
+#### March/8/2026:
+**HUD**
+
+**Sources:** [Adding a HUD in Godot 4.2](https://www.youtube.com/watch?v=k8zUXqoNcbA&t=5s) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)#### February/8/2026:
+**HUD**
+
+**Sources:** [Adding a HUD in Godot 4.2](https://www.youtube.com/watch?v=k8zUXqoNcbA&t=5s) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+
+
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
