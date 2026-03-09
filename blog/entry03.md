@@ -5,7 +5,10 @@
 
 Over the past few months, I have been learning **Godot** by experimenting with its tool and features using the **Godot Web Editor** and now **Godot Engine**. I started with the basics, such as creating scenes, adding sprites, and moving them with keyboard input using GDScript. As I progressed, I learned more advanced mechanics like platformer movement, gravity, collisions, animations, moving platforms, scene transitions, player pickups, and etc. Through this tinkering process, I’ve gained a better understanding of how different systems in Godot work together and feel more prepared to begin building our game, moving to our next step within our plan.
 
-**Example: Code Moving Platform**
+**Code Moving Platform**
+
+* This script makes a **Node2D** move back and forth between two points (``point_a``) and (``point_b``) at a constant speed. It also calculates the current velocity so other objects, for instance players standing on it, can use that information. Learning this can be useful because when my partner and I want to make a moving platform for our freedom project, I can use what I learnt from my tinkering in order to make that happen.
+
 ```JS
 extends Node2D
 
@@ -28,6 +31,7 @@ func _physics_process(delta: float) -> void:
     if position.distance_to(target) < 4:
         direction *= -1
 ```
+
 
 ### Engineering Design Process
 
