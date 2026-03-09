@@ -5,6 +5,8 @@
 
 Over the past few months, I have been learning **Godot** by experimenting with its tool and features using the **Godot Web Editor** and now **Godot Engine**. I started with the basics, such as creating scenes, adding sprites, and moving them with keyboard input using GDScript. As I progressed, I learned more advanced mechanics like platformer movement, gravity, collisions, animations, moving platforms, scene transitions, player pickups, and etc. Through this tinkering process, I’ve gained a better understanding of how different systems in Godot work together and feel more prepared to begin building our game, moving to our next step within our plan.
 
+**TWO EXAMPLES:**
+
 **Code Moving Platform**
 
 * This script makes a **Node2D** move back and forth between two points (``point_a``) and (``point_b``) at a constant speed. It also calculates the current velocity so other objects, for instance players standing on it, can use that information. Learning this can be useful because when my partner and I want to make a moving platform for our freedom project, I can use what I learnt from my tinkering in order to make that happen.
@@ -32,6 +34,17 @@ func _physics_process(delta: float) -> void:
         direction *= -1
 ```
 
+**Code Picking Up**
+
+* This is a script for a collectible item that can detect when the player touches an item, printing a message, and then removing itself from the game. I wanted to learn this because for our freedom project I want to let users to be able to pick up items. This way our freedom project can be more active, and this can help out with our simulation that we want to make. 
+
+```JS
+extends Area2D
+func _on_body_entered(body):
+	if body.name == "Player":
+		print("Pickup collected!")
+		queue_free()
+```
 
 ### Engineering Design Process
 
