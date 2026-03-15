@@ -3,7 +3,7 @@
 
 ### Content 
 
-Over the past few months, I have been tinkering and experimenting with ideas for our freedom project, exploring different approaches and tools to bring our vision to life. Even though I am focused on building our **MVP** and following our plan, I am still taking time to experiment and learn about **Godot**. A couple of Mondays ago, for instancs, I learned how to create a **timer** in **Godot**, which gave me new ideas for how to structure time-based mechanics in our project. Even though I am still thinkering, I’m gaining a better understanding of how different systems interact and feeling more confident as my partner and I slowly bring our freedom project to life.
+Over the past few months, I have been tinkering and experimenting with ideas for our freedom project, exploring different approaches and tools to bring our vision to life. Even though I am focused on building our **MVP** and following our plan, I am still taking time to experiment and learn about **Godot**. A couple of Mondays ago, for instance, I learned how to create a **timer** in **Godot**, which gave me new ideas for how to structure time-based mechanics in our project. Even though I am still thinkering, I’m gaining a better understanding of how different systems interact and feeling more confident as my partner and I slowly bring our freedom project to life.
 
 **EXAMPLE:**
 **Code Timer**
