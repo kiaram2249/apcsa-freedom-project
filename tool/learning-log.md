@@ -339,6 +339,33 @@ func _on_timer_timeout():
 ```
 ---
 
+#### March/22/2026:
+**Top Down Player Controller**
+
+**Sources:** [Top Down Player Controller Godot 4.2](https://www.youtube.com/watch?v=R1K5j5zm-YY) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
+
+* In this video, I learned how to create a **Top-Down Player Controller** in **Godot** to move a character around a 2D scene.
+	* A **CharacterBody2D** node is used for the player, which handles movement and collison detection.
+ 	* Movement is controlled by reading input actions like ``ui_up``, ``ui_down``, ``ui_left``, and ``ui_right`` in the script.
+  		* The ``Input.get_vector()`` function simplifies combining multiple directions into a single movement vector.
+* The player's velocity is calculated based on the input direction and a **speed** variable, then applied using the ``move_and_slide()`` function, which ensures smooth movemnent and handles collisions automatically.
+* Animations are controlled using an **AnimationPlayer** or **AnimatedSprite2D** node. The script can switch animations depending on the direction of movement, so the player looks correct while moving.
+* Overall, the video showed how to set up a responsive and smooth player controller in Godot, making it easy to move a character around a 2D game world. 
+
+**MY CODE: Top-Down Controller**
+
+```JS
+extends CharacterBody2D
+@export var speed: float = 200.0
+
+func _physics_process(delta):
+    # Get input vector from arrow keys or WASD
+    var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+    
+    velocity = input_vector * speed
+    move_and_slide()
+```
+---
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
