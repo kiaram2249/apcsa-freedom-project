@@ -374,7 +374,7 @@ func _physics_process(delta):
 * I learned how to make a **Top-Down Player Controller** using **CharacterBody2D**.
 	* Movement uses input actions like ``ui_up``, ``ui_down``, ``ui_left`` and ``ui_right``.
  	* The ``Input.get_vector()`` function combines directions smoothly.
-* Movement is applied with ``move_and_slide()`` for smooth collision handling.
+	* Movement is applied with ``move_and_slide()`` for smooth collision handling.
 * The video shows how to add **animations** using **AnimatedSprite2D**, changing animations based on movement direction.
 * I also learned how to create a **tile-based** world using **TileMap** and set collisions for obstacles.
 	* **Tiles** are used to build the environment, such as grass, paths, and obstacles.
@@ -397,7 +397,6 @@ func _physics_process(delta):
 	velocity = direction * speed
 	move_and_slide()
 	
-	# Handle animations
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y):
 			if direction.x > 0:
