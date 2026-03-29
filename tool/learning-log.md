@@ -368,7 +368,50 @@ func _physics_process(delta):
 
 #### March/23/2026
 
+**Sources:** [How to Create an RPG in Godot 4 (step by step)](https://www.youtube.com/watch?v=pBoXqW4RykE) | [Godot Engine](https://docs.godotengine.org/en/4.3/classes/class_animatedsprite2d.html?utm_source=chatgpt.com)
 
+* In this video, I learned how to create a **2D RPG** using the Godot Engine starting with setting up scenes and organizing the project properly.
+* I learned how to make a **Top-Down Player Controller** using **CharacterBody2D**.
+	* Movement uses input actions like ``ui_up``, ``ui_down``, ``ui_left`` and ``ui_right``.
+ 	* The ``Input.get_vector()`` function combines directions smoothly.
+* Movement is applied with ``move_and_slide()`` for smooth collision handling.
+* The video shows how to add **animations** using **AnimatedSprite2D**, changing animations based on movement direction.
+* I also learned how to create a **tile-based** world using **TileMap** and set collisions for obstacles.
+	* **Tiles** are used to build the environment, such as grass, paths, and obstacles.
+ 	* **Collision** layers are configured so the player cannot walk through solid objects.
+* The tutorial introduces **camera setup** using a **Camera2D** node.
+	* The camera follows the player smoothly, keeping them centered on screen.
+* The video also touches on **UI** **elements**, such as health bars or menus.
+	* UI is created using Control nodes and anchored properly to fit different screen sizes.
+ 	* This ensures the interface remains consistent across resolutions.
+* Overall, the video explains the basics of building an RPG system in Godot, including movement, animation, and world design.
+
+```JS
+extends CharacterBody2D
+
+@export var speed: float = 200.0
+@onready var sprite = $AnimatedSprite2D
+
+func _physics_process(delta):
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = direction * speed
+	move_and_slide()
+	
+	# Handle animations
+	if direction != Vector2.ZERO:
+		if abs(direction.x) > abs(direction.y):
+			if direction.x > 0:
+				sprite.play("walk_right")
+			else:
+				sprite.play("walk_left")
+		else:
+			if direction.y > 0:
+				sprite.play("walk_down")
+			else:
+				sprite.play("walk_up")
+	else:
+		sprite.stop()
+```
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
