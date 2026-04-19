@@ -1,5 +1,5 @@
 # Entry 1
-##### November/9/2025
+##### 11/9/2025
 
 ### Content
 
