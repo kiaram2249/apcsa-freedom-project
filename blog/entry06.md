@@ -23,19 +23,19 @@ Step 8 is especially important because presenting at the EXPO gave me a chance t
 
 ### Skills
 
-##### Time Management
+#### Time Management
 
 Time management was something I really had to focus on, especially with deadlines approaching and trying to balance the project with other schoolwork. It’s also a skill I know I still need to improve, because there were times when I left things until the last minute, and that only ended up creating more stress for me. Learning to manage my time better will help me stay more organized and avoid feeling overwhelmed in the future.
 
-##### Communication
+#### Communication
 
 Learning how to communicate clearly with my partner made everything run more smoothly, especially when we had to make quick decisions or explain our ideas. 
 
-##### Collaboration
+#### Collaboration
 
 Collaboration was key, because we all had different strengths, and working together helped us solve problems faster and come up with better ideas.
 
-##### Problem Decomposition
+#### Problem Decomposition
 
 Problem Decomposition, breaking down big challenges into smaller steps. It made complex tasks way more manageable, especially when coding or fixing bugs.
 
@@ -43,12 +43,12 @@ Problem Decomposition, breaking down big challenges into smaller steps. It made 
 
 These are some of the sources I used while learning/tinkering how to use my tool Godot. They helped me understand how it works and how I can apply it in our project. I’ve also included slides that my partner Robert and I created, which helped us during our presentation and gave us a chance to reflect on the challenges we faced and the takeaways we gained throughout the process.
 
-##### Sources that I used to learn Godot:
+#### Sources that I used to learn Godot:
 
 *  [Godot Web Editor](https://editor.godotengine.org/releases/latest/)
 *  [DevWorm-YT](https://www.youtube.com/@dev-worm)
 
-##### Slides that Robert and I made:
+#### Slides that Robert and I made:
 
 * [Harvest Hollow](https://docs.google.com/presentation/d/1nKy3B5qZ9lk1cew-1rmFootQ864FMUxhkPwBgyX1vIY/edit?slide=id.p#slide=id.p)
 
