@@ -9,7 +9,9 @@ Learning Godot taught me much more than just game development. It improved my ab
 
 The Freedom Project allowed me to combine everything I learned throughout the year into one final product. Building a game from scratch with Robert required creativity, planning, and persistence. It also taught me and Robert valuable time-management skills because we had to balance learning a new tool while continuing to develop and improve our project. However, throughout the process I documented my progress, and reflected on challenges.
 
+### EXPO
 
+Doing the EXPO this year made me nervous, even though I have presented projects before. No matter how much I prepare, I still get knots before talking to judges and visitors about my work. I think a big part of it is wanting to do well and making sure I can explain everything clearly. Robert and I were a little nervous, especially because we didn't spent so much time working on our Freedom Project. 
 
 
 
